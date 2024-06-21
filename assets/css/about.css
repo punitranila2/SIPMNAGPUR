@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../img/layer.png");
+  margin: auto;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  background: rgba(83, 55, 87, 0.55);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.jumbotron {
+  height: 150px;
+  background-color: inherit;
+  color: #fff;
+  margin-top: 5%;
+}
+.display-4 {
+  text-align: center;
+  position: relative;
+  animation-name: fadeInLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    margin-top: -20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 35px;
+  }
+}
+#content .content {
+  color: #fff;
+}
+.tab-pane {
+  padding-top: 40px;
+  position: relative;
+  animation-name: border;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes border {
+  0% {
+    border-bottom: 2px solid #f1f1f1;
+  }
+  50% {
+    border-bottom: 2px solid #f1f1f1;
+    border-bottom-right-radius: 100px;
+  }
+  100% {
+    border-bottom: 2px solid #f1f1f1;
+    border-right: 2px solid #f1f1f1;
+    border-bottom-right-radius: 100px;
+  }
+}
+
+/*///////// ANIMATIONS ///////// */
+#cube-container {
+	padding-top:35px;
+	width: 280px;
+	height: 240px;
+	margin: 25px auto;
+	perspective: 800px;			
+}
+
+#cube-container:before {
+	content: '';
+  position: absolute; 
+	top: 120px;
+	left: 0;
+	width: 100%; 
+	height: 100%;	
+	box-shadow: 0 0 75px 20px rgba(0, 0, 0,0.3), inset 0 0 350px 350px rgba(0, 0, 0,0.3);	
+	transform: rotateX(95deg) translateZ(-100px) scale(1);	
+	animation: rotateShadow 16s infinite;	
+}
+
+.cube {	
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transform-style: preserve-3d;			
+	transition: all 0.8s ease-in-out;		
+	animation: rotate 16s infinite;	
+}
+
+.cube img {
+	position: absolute;
+	width: 280px;
+	height: 240px;		
+	backface-visibility: hidden;		
+}
+
+.cube img:nth-child(1) {
+	transform: rotateY(0deg) translateZ(140px);
+}
+.cube img:nth-child(2) {
+	transform: rotateY(90deg) translateZ(140px);
+}
+.cube img:nth-child(3) {
+	transform: rotateY(-90deg) translateZ(140px);
+}
+.cube img:nth-child(4) {
+	transform: rotateY(180deg) translateZ(140px);
+}
+
+@keyframes rotate {
+	0% { transform: rotateY(0deg); }		
+	25% { transform: rotateY(90deg); }		
+	50% { transform: rotateY(180deg);}	
+	75% {  transform: rotateY(270deg); }	
+	100% { transform: rotateY(360deg); }
+}
+
+@keyframes rotateShadow {
+	0% { transform:  rotateX(95deg) translateZ(-100px) scale(1) rotateZ(360deg); }		
+	25% { transform:  rotateX(95deg) translateZ(-100px) scale(1) rotateZ(270deg); }		
+	50% { transform:  rotateX(95deg) translateZ(-100px) scale(1) rotateZ(180deg);}	
+	75% {  transform: rotateX(95deg) translateZ(-100px) scale(1)  rotateZ(90deg); }	
+	100% { transform: rotateX(95deg) translateZ(-100px) scale(1)  rotateZ(0deg); }
+}
+ 
+
+#about-content {
+  position: relative;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
+# CUSTOM SCROLL BAR
+--------------------------------------------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+  border-bottom-right-radius: 120px;
+  border-bottom-left-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: black;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px 0;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+#footer:before {
+  content: "";
+  background: rgba(83, 55, 87, 0.55);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#footer .credits {
+  font-size: 13px;
+  color: #888;
+}
+
+#footer .footer-links a {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+#footer .footer-links a:first-child {
+  padding-left: 0;
+}
+
+#footer .footer-links a:hover {
+  color: #1dc8cd;
+}
+
+.nav{
+  margin-top: 50px;
+}

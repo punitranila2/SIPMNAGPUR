@@ -1,0 +1,131 @@
+* {
+	margin: 0;
+}
+
+body {
+  background-image: -webkit-linear-gradient(315deg, rgba(155, 89, 182, 0.8) 0%, rgba(211, 84, 0, 0.8) 100%), url("http://i.imgur.com/QRbwNvh.jpg");
+  background-image: linear-gradient(135deg, rgba(155, 89, 182, 0.8) 0%, rgba(211, 84, 0, 0.8) 100%), url("http://i.imgur.com/QRbwNvh.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 2;
+  background-size: cover;
+}
+.container {
+  padding: 1rem;
+}
+.accordion {
+  font-size: 1rem;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.accordion-header,
+.accordion-body {
+  background: white;
+}
+
+.accordion-header {
+  padding: 1.5em 1.5em;
+  background: #3b56ed;
+  color: white;
+  cursor: pointer;
+  font-size: .8em;
+  letter-spacing: .1em;
+  transition: all .3s;
+}
+
+.accordion__item {
+    border-bottom: 1px solid #051da1;
+}
+
+.accordion__item .accordion__item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.accordion-header:hover {
+  background: #051da1;
+  position: relative;
+  z-index: 5;
+}
+
+.accordion-body {
+  background: #fcfcfc;
+  color: #353535;
+  display: none;
+}
+
+.accordion-body__contents {
+  padding: 1.5em 1.5em;
+  font-size: .85em;
+}
+
+.accordion__item.active:last-child .accordion-header {
+  border-radius: none;
+}
+
+.accordion:first-child > .accordion__item > .accordion-header {
+  border-bottom: 1px solid transparent;
+}
+
+.accordion__item > .accordion-header:after {
+  content: "\f3d0";
+  font-family: IonIcons;
+  font-size: 1.2em;
+  float: right;
+  position: relative;
+  top: -2px;
+  transition: .3s all;
+  transform: rotate(0deg);
+}
+
+.accordion__item.active > .accordion-header:after {
+  transform: rotate(-180deg);
+}
+
+.accordion__item.active .accordion-header {
+  background: #2D3D99;
+}
+
+.accordion__item .accordion__item .accordion-header {
+  background: #f1f1f1;
+  color: #353535;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    padding: 1em;
+  }
+  
+  .accordion {
+    width: 100%;
+  }
+}
+
+/*--------------------------------------------------------------
+# Custom Scrollbar
+--------------------------------------------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border-bottom-right-radius: 120px;
+  border-bottom-left-radius: 10px;
+}

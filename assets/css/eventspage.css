@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #111;
+  margin: auto;
+  position: relative;
+}
+.jumbotron {
+  height: 150px;
+  background-color: inherit;
+  color: #fff;
+  margin-top: 5%;
+}
+.carousel-item {
+  padding: 20px;
+  height: 350px;
+}
+.display-4 {
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  animation-name: fadeInLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 35px;
+  }
+}
+#content .content {
+  color: #fff;
+}
+.tab-pane {
+  padding: 40px;
+  position: relative;
+  animation-name: border;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+@keyframes border {
+  0% {
+    border-bottom: 2px solid #487eb0;
+  }
+  50% {
+    border-bottom: 2px solid #487eb0;
+    border-bottom-right-radius: 100px;
+  }
+  100% {
+    border-bottom: 2px solid #487eb0;
+    border-right: 2px solid #487eb0;
+    border-bottom-right-radius: 100px;
+  }
+}
+
+/*///////// ANIMATIONS ///////// */
+#slider {
+  position: relative;
+  animation-name: fadeInRight;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    margin-left: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+#about-content {
+  position: relative;
+  animation-name: fadeIn;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*--------------------------------------------------------------
+# Buttons CSS
+--------------------------------------------------------------*/
+.buttons {
+  padding: 20px;
+}
+
+
+/*--------------------------------------------------------------
+# CUSTOM SCROLL BAR
+--------------------------------------------------------------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+  border-bottom-right-radius: 120px;
+  border-bottom-left-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# EVENT Section
+--------------------------------------------------------------*/
+
+#gallery {
+  background: inherit;
+  overflow: hidden;
+}
+
+#gallery .gallery-overlay {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  bottom: 0px;
+  left: 0px;
+  width: 250px;
+  height: 250px;
+  opacity: 1;
+  transition: all ease-in-out 0.4s;
+}
+
+#gallery .gallery-item {
+  overflow: hidden;
+  position: relative;
+  padding: 50px;
+  height: 320px;
+  text-align: center;
+}
+
+#gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+  height: 200px;
+  width: 200PX;
+}
+
+#gallery .gallery-item:hover img {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  border: solid; /* TO SET THE BORDER OF IMAGE */
+  border-color: #fff;
+  border-width: 1px; 
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-filter: blur(0px); /* TO ADUJUST THE BLUR EFFECT*/
+  filter: blur(1px);
+}
+
+#gallery .gallery-item:hover {
+  opacity: 1;
+  background: inherit;
+}
+div.polaroid{
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+img{width: 100%}
+div.container{
+  text-align: center;
+  padding: 10px 10px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+  border-radius: 3px;
+}
+.bg img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+}
+.bg .overlay h2 {
+  padding-top: 100px;
+  font-family: 'Droid Serif', serif;
+  text-shadow: 2px 2px 4px #000;
+}
+.bg .overlay p {
+  font-family: 'Julius Sans One', sans-serif;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: inherit;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px 0;
+  color: #f1f1f1;
+  font-size: 14px;
+}
+
+#footer .credits {
+  font-size: 13px;
+  color: #888;
+}
+
+#footer .footer-links a {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+#footer .footer-links a:first-child {
+  padding-left: 0;
+}
+
+#footer .footer-links a:hover {
+  color: #1dc8cd;
+}
+
+/* ------- DEVFOLIO BUTTON ------------ */
+#devfolio-apply-now {
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: #3770FF;
+    border-radius: 3px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 20px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+#devfolio-apply-now:not([disabled]) {
+    cursor: pointer;
+}
+
+#devfolio-apply-now:hover {
+    background-color: #2954BF !important;
+}

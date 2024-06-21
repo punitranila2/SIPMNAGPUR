@@ -1,0 +1,520 @@
+/* 
+-------------------- Stylesheet --------------------
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url("../img/layer.png");
+  margin: auto;
+  position: relative;
+}
+
+body:before {
+  content: "";
+  background: rgba(83, 55, 87, 0.65);
+  position: relative;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+.data {
+	position: relative;
+  padding-top: 10%;
+  margin-left: 3%;
+}
+.data:before {
+  content: "";
+  background: rgba(83, 55, 87, 0.55);
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+#particles-js {
+  position: relative;
+}
+#particles-js:before {
+  content: "";
+  background: rgba(83, 55, 87, 0.55);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.college {
+  position: absolute;
+  margin-left: 22%;
+  width: 48%;
+  z-index: 3;
+  -webkit-animation: heading 3s ease-in-out 1 forwards;
+  -moz-animation: heading 3s ease-in-out 1 forwards;
+  -ms-animation: heading 3s ease-in-out 1 forwards;
+  -o-animation: heading 3s ease-in-out 1 forwards;
+  animation: heading 3s ease-in-out 1 forwards;
+}
+
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+    margin-top: -7%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -2%;
+  }
+}
+
+.tnx {
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 45%;
+  width: 75px;
+  perspective: 1000px;
+  height: 75px;
+  z-index: 2;
+  -webkit-animation: zoomIn 15s ease-in-out 1 normal forwards;
+  -moz-animation: zoomIn 15s ease-in-out 1 normal forwards;
+  -ms-animation: zoomIn 15s ease-in-out 1 normal forwards;
+  -o-animation: zoomIn 15s ease-in-out 1 normal forwards;
+  animation: zoomIn 15s ease-in-out 1 normal forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1,1);
+    opacity: 1;
+    perspective: 100px;
+  }
+  100% {
+    transform: scale(3,3);
+    opacity: 1;
+    perspective: 2000px;
+  }
+}
+
+.subheading {
+  position: absolute;
+  color: #fff;
+  margin-top: 30%;
+  margin-left: 34%;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-family: 'Arial Black';
+  font-weight: bolder;
+  z-index: 3;
+  letter-spacing: 5px;
+  animation: subheading 3s ease-in-out 1 forwards;
+}
+
+.text1{
+  position: absolute;
+  color: #fff;
+  margin-top: 35%;
+  margin-left: 35%;
+  font-size: 31px;
+  text-transform: uppercase;
+  font-family: 'Arial Black';
+  font-weight: bolder;
+  z-index: 3;
+  letter-spacing: 5px;
+  animation: text1 3s ease-in-out 1 forwards;
+}
+
+.text2{
+  position: absolute;
+  color: #fff;
+  margin-top: 40%;
+  margin-left: 35%;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Arial Black';
+  font-weight: bolder;
+  z-index: 3;
+  letter-spacing: 5px;
+  animation: text2 3s ease-in-out 1 forwards;
+}
+
+
+@keyframes subheading {
+  0% {
+    opacity: 0;
+    margin-top: 45%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 30%;
+  }
+}
+
+@keyframes text1 {
+  0% {
+    opacity: 0;
+    margin-top: 45%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 35%;
+  }
+}
+
+@keyframes text2 {
+  0% {
+    opacity: 0;
+    margin-top: 45%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 40%;
+  }
+}
+
+/* ------------------------------------------------
+-------------------- Mobile View --------------------
+-------------------------------------------------- */
+
+@media only screen and (max-width: 960px) {
+  .data {
+    position: relative;
+    padding-top: 15%;
+    margin-left: 3%;
+  }
+  .college {
+    padding-top: 0%;
+  }
+  .moon {
+    margin-top: 14%;
+    margin-left: 42%;
+  }
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1,1);
+      opacity: 0;
+      perspective: 100px;
+    }
+    100% {
+      transform: scale(2.8,2.8);
+      opacity: 1;
+      perspective: 1000px;
+    }
+  }
+  .tnx {
+    margin-top: 17%;
+    margin-left: 40%;
+  }
+  .subheading {
+    margin-top: 35%;
+    margin-left: 30%;
+  }
+  .text1{
+    margin-top: 40%;
+    margin-left: 32%;
+  }
+  .text2{
+    margin-top: 45%;
+    margin-left: 33%;
+  }
+  @keyframes subheading {
+    0% {
+      opacity: 0;
+      margin-top: 45%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 35%;
+    }
+  }
+  @keyframes text1 {
+    0% {
+      opacity: 0;
+      margin-top: 45%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 40%;
+    }
+  }
+  @keyframes text2 {
+    0% {
+      opacity: 0;
+      margin-top: 45%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 45%;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .data {
+    position: relative;
+    padding-top: 15%;
+    margin-left: 3%;
+  }
+  .college {
+    margin-top: 135%;
+  }
+  .moon {
+    margin-top: 14%;
+    margin-left: 42%;
+  }
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1,1);
+      opacity: 0.2;
+      perspective: 100px;
+    }
+    100% {
+      transform: scale(2.8,2.8);
+      opacity: 1;
+      perspective: 1000px;
+    }
+  }
+  .tnx {
+    margin-top: 13%;
+    margin-left: 40%;
+  }
+  .subheading {
+    margin-top: 35%;
+    margin-left: 30%;
+    font-size: 30px;
+  }
+  @keyframes subheading {
+    0% {
+      opacity: 0;
+      margin-top: 40%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .data {
+    position: relative;
+    padding-top: 15%;
+    margin-left: 3%;
+  }
+  .college {
+    margin-top: 13%;
+  }
+  .moon {
+    margin-top: 14%;
+    margin-left: 42%;
+  }
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1,1);
+      opacity: 0.2;
+      perspective: 100px;
+    }
+    100% {
+      transform: scale(2,2);
+      opacity: 1;
+      perspective: 1000px;
+    }
+  }
+  .tnx {
+    margin-top: 14%;
+    margin-left: 40%;
+    width: 80px;
+    height: 80px;
+  }
+  .subheading {
+    margin-top: 35%;
+    margin-left: 30%;
+    font-size: 30px;
+  }
+  @keyframes subheading {
+    0% {
+      opacity: 0;
+      margin-top: 40%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 35%;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .data {
+    position: relative;
+    padding-top: 40%;
+  }
+  .college {
+    padding-top: 10%;
+    margin-left: 8%;
+    width: 80%;
+  }
+  .moon {
+    margin-top: 40%;
+    margin-left: 37%;
+  }
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1,1);
+      opacity: 0.2;
+      perspective: 100px;
+    }
+    100% {
+      transform: scale(2,2);
+      opacity: 1;
+      perspective: 1000px;
+    }
+  }
+  .tnx {
+    margin-top: 40%;
+    margin-left: 42%;
+    width: 80;
+    height: 80px;
+  }
+  .subheading {
+    margin-top: 82%;
+    margin-left: 21%;
+    font-size: 27px;
+  }
+  .text1 {
+    margin-top: 90%;
+    margin-left: 23%;
+    font-size: 22px;
+  }
+  .text2 {
+    margin-top: 100%;
+    margin-left: 24%;
+    font-size: 22px;
+  }
+  @keyframes subheading {
+    0% {
+      opacity: 0;
+      margin-top: 120%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 82%;
+    }
+  }
+  @keyframes text1 {
+    0% {
+      opacity: 0;
+      margin-top: 120%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 90%;
+    }
+  }
+  @keyframes text2 {
+    0% {
+      opacity: 0;
+      margin-top: 120%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 100%;
+    }
+  }
+  #footer {
+    margin-top: 100%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  body{
+    background: url(../img/layermob.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .data {
+    position: relative;
+    padding-top: 40%;
+  }
+  .college {
+    padding-top: 10%;
+    margin-left: 7%;
+    width: 80%;
+  }
+  .moon {
+    margin-top: 40%;
+    margin-left: 37%;
+  }
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1,1);
+      opacity: 0.2;
+      perspective: 100px;
+    }
+    100% {
+      transform: scale(2,2);
+      opacity: 1;
+      perspective: 1000px;
+    }
+  }
+  .tnx {
+    margin-top: 40%;
+    margin-left: 37%;
+    width: 80;
+    height: 80px;
+  }
+  .subheading {
+    margin-top: 92%;
+    margin-left: 17%;
+    font-size: 25px;
+  }
+  .text1 {
+    margin-top: 92%;
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  .text2 {
+    margin-top: 92%;
+    margin-left: 20%;
+    font-size: 20px;
+  }
+  @keyframes subheading {
+    0% {
+      opacity: 0;
+      margin-top: 140%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 92%;
+    }
+  }
+  @keyframes text1 {
+    0% {
+      opacity: 0;
+      margin-top: 140%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 102%;
+    }
+  }
+  @keyframes text2 {
+    0% {
+      opacity: 0;
+      margin-top: 140%;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 112%;
+    }
+  }
+  #footer {
+    margin-top: 86%;
+  }
+}

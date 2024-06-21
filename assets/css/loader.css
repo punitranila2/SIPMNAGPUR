@@ -1,0 +1,53 @@
+/*--------------------------------------------------------------
+# General CSS STYLESHEET
+--------------------------------------------------------------*/
+body {
+  background: #000;
+  color: #666666;
+  overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+# Rocket Animation
+--------------------------------------------------------------*/
+.rocket {
+  position: relative;
+  height: 15%;
+  width: 15%;
+  margin-top: 100%;
+  -webkit-animation: flight .1s linear infinite, takeoff 3s ease-out 2s 1 forwards;
+  -ms-animation: flight .1s linear infinite, takeoff 3s ease-out 2s 1 forwards;
+  -o-animation: flight .1s linear infinite, takeoff 3s ease-out 2s 1 forwards;
+  -moz-animation: flight .1s linear infinite, takeoff 3s ease-out 2s 1 forwards;
+  animation: flight .1s linear infinite, takeoff 3s ease-out 2s 1 forwards;
+}
+
+@keyframes flight {
+  from {
+    -webkit-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  to {
+    -webkit-transform: rotate(-2deg);
+    -webkit-transform-origin: center center;
+    -ms-transform: rotate(-2deg);
+    -ms-transform-origin: center center;
+    -o-transform: rotate(-2deg);
+    -o-transform-origin: center center;
+    -moz-transform: rotate(-2deg);
+    -moz-transform-origin: center center;
+    transform: rotate(-2deg);
+    transform-origin: center center;
+  }
+}
+@keyframes takeoff {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: -300%;
+  }
+}

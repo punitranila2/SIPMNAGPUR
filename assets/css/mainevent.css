@@ -1,0 +1,387 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+.jumbotron {
+    height: 150px;
+    background-color: inherit;
+    color: #fff;
+    margin-top: 5%;
+  }
+  .display-4 {
+    text-align: center;
+    position: relative;
+    animation-name: fadeInLeft;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      margin-top: -50px;
+    }
+    100% {
+      opacity: 1;
+      margin-top: 35px;
+    }
+  }
+
+  
+@-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  
+#gallery {
+  background: inherit;
+  padding: 50px 0px 0px;
+  overflow: hidden;
+}
+
+#gallery .gallery-overlay {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  bottom: 0px;
+  left: 0px;
+  width: 250px;
+  height: 250px;
+  opacity: 1;
+  transition: all ease-in-out 0.4s;
+}
+
+#gallery .gallery-item {
+  overflow: hidden;
+  position: relative;
+  padding: 50px;
+  height: 320px;
+  text-align: center;
+}
+
+#gallery .gallery-item img {
+  transition: all ease-in-out 0.4s;
+  height: 200px;
+  width: 200PX;
+}
+
+#gallery .gallery-item:hover img {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Safari 3-8 */
+  transform: scale(1.5);
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  border: solid; /* TO SET THE BORDER OF IMAGE */
+  border-color: #fff;
+  border-width: 1px; 
+  border-radius: 50%;
+  opacity: 0.5;
+  -webkit-filter: blur(0px); /* TO ADUJUST THE BLUR EFFECT*/
+  filter: blur(1px);
+}
+
+#gallery .gallery-item:hover {
+  opacity: 1;
+  background: inherit;
+}
+div.polaroid{
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+img{width: 100%}
+div.container{
+  text-align: center;
+  padding: 10px 10px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.bg,
+.overlay {
+  text-align: center;
+}
+
+img,
+.overlay {
+  transition: .3s all;
+  border-radius: 3px;
+}
+.bg img {
+  width: 100%;
+  margin-bottom: -4px;
+}
+.bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  opacity: 0;
+}
+.bg .overlay h2 {
+  padding-top: 100px;
+  font-family: 'Droid Serif', serif;
+  text-shadow: 2px 2px 4px #000;
+}
+.bg .overlay p {
+  font-family: 'Julius Sans One', sans-serif;
+}
+.bg:hover .overlay {
+  opacity: 1;
+}
+.bg:hover img {
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
+}
+
+
+
+  
+  /*--------------------------------------------------------------
+  # Custom CSS
+  --------------------------------------------------------------*/
+  /* EVENT Section
+  --------------------------------*/
+  
+  .container-1{
+    margin: 0px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+}
+  
+.card_event {
+    display: inline-block;
+    margin: 50px 20px 0;
+    width: 350px;
+    height: 325px;
+    perspective: 1000px;
+    border-radius: 16px;
+}
+  
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+  
+.card__face--front img{
+    width: 100%;
+    height: 100%;
+}
+
+.card__face--front{
+    position: relative;
+}
+
+.card__face--front h2{
+    position: absolute;
+}
+  
+.one.is-flipped {
+    transform: rotateY(180deg);
+}
+  
+.two.is-flipped {
+    transform: rotateY(180deg);
+}
+  
+.three.is-flipped {
+    transform: rotateY(180deg);
+}
+  
+.four.is-flipped {
+    transform: rotateY(180deg);
+}
+  
+.five.is-flipped {
+    transform: rotateY(180deg);
+}
+  
+.six.is-flipped {
+    transform: rotateY(180deg);
+}
+  
+  
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+  
+.card__face--front {
+    /* background-image: linear-gradient(to bottom right, var(--primary), var(--secondary)); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.card__face--front h2 {
+    color: #FFF;
+    font-size: 32px;
+}
+  
+.card__face--back {
+    background-color: var(--light);
+    transform: rotateY(180deg);
+}
+  
+.card__content {
+    width: 100%;
+    height: 100%;
+}
+  
+.card__header {
+    position: relative;
+    padding: 30px 30px 10px;
+}
+  
+.card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+    z-index: -1;
+    border-radius: 0px 0px 50% 0px;
+}
+  
+.pp {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: #FFF;
+    border: 5px solid #FFF;
+    object-fit: cover;
+}
+  
+.card__header h2 {
+    color: #FFF;
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+.card__body {
+    padding: 30px;
+}
+  
+.card__body h3 {
+    color: var(--dark);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+  
+.card__body p {
+    color: var(--dark);
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.btn{
+    margin: 0px 50px;
+    margin-top: -20px;
+}
+
+.btn a{
+    color: #FFF;
+}
+
+/* :: 6.0 Buttons Area CSS */
+.btn:focus {
+  box-shadow: none; }
+
+.confer-btn {
+  position: relative;
+  z-index: 1;
+  height: 46px;
+  line-height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  display: inline-block;
+  padding: 0 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  border-radius: 23px;
+  -webkit-transition-duration: 500ms;
+  -o-transition-duration: 500ms;
+  transition-duration: 500ms;
+  overflow: hidden; }
+  .confer-btn i {
+    margin-left: 5px; }
+  .confer-btn::before {
+    -webkit-transition-duration: 800ms;
+    -o-transition-duration: 800ms;
+    transition-duration: 800ms;
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    content: '';
+    background: #df42b1;
+    background-image: -webkit-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+    background-image: -ms-linear-gradient(120deg, #505add 0%, #df42b1 100%);
+    z-index: -2; }
+  .confer-btn:focus, .confer-btn:hover {
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #111343 !important;
+    -webkit-box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+    box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15); }
+    .confer-btn:focus i, .confer-btn:hover i {
+      -webkit-animation: buttonIcon 1s ease-in infinite;
+      animation: buttonIcon 1s ease-in infinite; }
+    .confer-btn:focus::before, .confer-btn:hover::before {
+      left: 110%; }
+
+@-webkit-keyframes buttonIcon {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes buttonIcon {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }

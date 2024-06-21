@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #111;
+  margin: auto;
+  position: relative;
+}
+.jumbotron {
+  height: 150px;
+  background-color: inherit;
+  color: #fff;
+  margin-top: 5%;
+}
+.display-4 {
+  text-align: center;
+  position: relative;
+  animation-name: fadeInLeft;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 35px;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    margin-left: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+.rules {
+    position: relative;
+    display: inline-block;
+    border-bottom: transparent;
+    border-right: transparent;
+    border-left: 3px solid #00CED1;
+    border-top: 3px solid #00CED1;
+    border-top-left-radius: 50px;
+    max-width: auto;
+    height: 300px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    z-index: 1;
+    perspective: 10;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 50px;
+    animation-name: fadeInRight;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+.rules li{
+    padding: 5px;
+    color: #c0c0c0;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    margin-left: -200px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+.terms {
+    position: relative;
+    font-size: 20px;
+    color: #c1c1c1;
+    padding: 20px;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* CUSTOM SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+  border-bottom-right-radius: 120px;
+  border-bottom-left-radius: 10px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: inherit;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px 0;
+  color: #f1f1f1;
+  font-size: 14px;
+  margin-top: 100px;
+}
+
+#footer .credits {
+  font-size: 13px;
+  color: #888;
+}
+
+#footer .footer-links a {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 16px;
+  padding-left: 15px;
+}
+
+#footer .footer-links a:first-child {
+  padding-left: 0;
+}
+
+#footer .footer-links a:hover {
+  color: #1dc8cd;
+}
